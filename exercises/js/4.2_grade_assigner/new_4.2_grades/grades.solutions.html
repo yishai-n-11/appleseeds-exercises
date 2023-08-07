@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades</title>
+</head>
+
+<body>
+    <script>
+        // letter to grade
+        const letterGrade = prompt('please enter a letter to get a grade').toUpperCase();
+        if (typeof letterGrade !== 'string' || (
+            letterGrade !== 'A' &&
+            letterGrade !== 'B' &&
+            letterGrade !== 'C' &&
+            letterGrade !== 'D' &&
+            letterGrade !== 'F'
+        )) {
+            alert('wrong input! bad letter');
+        } else {
+            if (letterGrade === 'A') {
+                console.log('your grade is between 90-100');
+            } else if (letterGrade === 'B') {
+                console.log('your grade is between 89-80');
+            } else if (letterGrade === 'C') {
+                console.log('your grade is between 79-70');
+            } else if (letterGrade === 'D') {
+                console.log('your grade is between 69-65');
+            } else if (letterGrade === 'F') {
+                console.log('your grade is between 64-0');
+            }
+        }
+
+
+        // grade to letter
+
+        const numberGrade = Number.parseInt(prompt('please enter a number to get a letter grade'));
+        if (Number.isNaN(numberGrade) || numberGrade < 0 || numberGrade > 100) {
+            alert('wrong input! bad number');
+        } else {
+            if (numberGrade <= 100 && numberGrade > 90) {
+                console.log('your grade is A');
+            } else if (numberGrade <= 89 && numberGrade > 80) {
+                console.log('your grade is B');
+            } else if (numberGrade <= 79 && numberGrade > 70) {
+                console.log('your grade is C');
+            } else if (numberGrade <= 69 && numberGrade > 65) {
+                console.log('your grade is D');
+            } else if (numberGrade <= 64) {
+                console.log('your grade is F');
+            }
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
