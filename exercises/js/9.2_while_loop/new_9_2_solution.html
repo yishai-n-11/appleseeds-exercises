@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guessing game</title>
+</head>
+
+<body>
+    <script>
+        let isGuessed = false;
+        const secretNum = Math.floor(Math.random() * 50);
+        while (!isGuessed) {
+            const guess = parseInt(prompt('guess the number'));
+            if (secretNum < guess) {
+                console.log('too big');
+            } else if (secretNum > guess) {
+                console.log('too small');
+            } else if (secretNum === guess) {
+                alert('correct number!. game over.');
+                isGuessed = true;
+            }
+        }
+    </script>
+</body>
+
+</html>

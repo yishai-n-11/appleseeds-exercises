@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array basics</title>
+</head>
+
+<body>
+    <script>
+        const people = ['Greg', 'Mary', 'Devon', 'James'];
+        // 1
+
+        people.shift();
+
+        // 2
+
+        people.pop();
+
+        // 3
+
+        people.unshift('Matt');
+
+        // 4
+
+        people.push('Ellie');
+
+        // 5
+
+        console.log(people.slice(2));
+
+        // 6
+
+        people.indexOf('Mary');
+
+        // 7
+
+        people.indexOf('Foo');
+
+        // 8
+
+        const people2 = ['Greg', 'Mary', 'Devon', 'James'];
+
+        people2.splice(2, 1, 'Elizabeth', 'Artie');
+
+        // 9
+
+        const withBob = people2.concat('Bob');
+        const withBob2 = [...people2, 'Bob'];
+        console.log(withBob2);
+        console.log(people2);
+
+    </script>
+</body>
+
+</html>
