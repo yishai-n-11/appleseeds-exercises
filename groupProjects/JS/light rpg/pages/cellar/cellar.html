@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js"></script>
+    <title>RPG - cellar</title>
+</head>
+
+<body>
+    <main>
+        <h1>cellar</h1>
+    </main>
+    <aside>
+        <h1>actions</h1>
+        <button id="items">search for items</button>
+        <button id="monsters">search for monsters</button>
+        <button id="showLocations">show connected locations</button>
+        <form action="">
+            <label for="">connected locations</label>
+            <select name="locations" id="locations" onchange="selectLocation(event)">
+                <!-- fill options based on connected locations -->
+                <option value="">select location</option>
+                <option value="main">main</option>
+            </select>
+        </form>
+        <a href="../main/main.html">open map</a>
+    </aside>
+</body>
+
+</html>

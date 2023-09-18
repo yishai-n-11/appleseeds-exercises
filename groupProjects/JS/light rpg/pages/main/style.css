@@ -1,0 +1,32 @@
+html, body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 50%;
+    background-image: url('../../assets/main_map.png');
+    background-size: cover;
+}
+
+aside {
+    width: 50%;
+    background-color: aqua;
+}
+
+a {
+    background-color: blanchedalmond;
+    width: 200px;
+    height: 80px;
+    font-size: 50px;
+    position: absolute;
+    text-align: center;
+    border: 3px solid darkcyan;
+    border-radius: 10px;
+    top: 50%;
+    left: 20%;
+}
