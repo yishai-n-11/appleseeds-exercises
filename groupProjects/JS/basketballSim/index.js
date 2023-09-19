@@ -1,5 +1,6 @@
 const msgBoard = document.getElementById("msgBoard");
 const startBtn = document.getElementById("startBtn");
+const gameTimeNum = document.getElementById("gameTimeNum");
 
 const teamAScore = document.getElementById("teamAScore");
 const teamBScore = document.getElementById("teamBScore");
@@ -40,7 +41,21 @@ startBtn.addEventListener('click', startGame);
 
 function startGame() {
     updateMsg('start game!');
+    let totalTime = 0;
     // start timer, generate random events, update date accordingly until game is done.
+    let gameInterval = setInterval(function () {
+        if (totalTime < gameTime) {
+            // generate events if X amount of time passed from the last event.
+            totalTime += 1;
+            updateGameTime(totalTime);
+
+        } else {
+            clearInterval(gameInterval);
+            updateMsg('game over!');
+            // summarize the game
+        }
+    }, 5000);
+
     // when the game time is done - check which team won and generate the message with team name, final score, and top scorrer from the team
 
 }
@@ -59,6 +74,10 @@ function generatePlayer() {
     // pick random last name from lastNames array
     // pick random height from 180-220 cm
     // start each player with 0 points and 0 fouls
+}
+
+function updateGameTime(newTime) {
+    gameTimeNum.innerText = newTime;
 }
 
 function updateTeamScoreInUI(team, addPoints) {

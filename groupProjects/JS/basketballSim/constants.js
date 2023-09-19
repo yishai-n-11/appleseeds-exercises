@@ -1,4 +1,4 @@
-const gameTime = 60;
+const gameTime = 5;
 const firstNames = []; // populate!
 const lastNames = []; // populate!
 const teamA = [];
