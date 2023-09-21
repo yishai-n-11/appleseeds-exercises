@@ -41,6 +41,7 @@ startBtn.addEventListener('click', startGame);
 
 function startGame() {
     updateMsg('start game!');
+    updateGameTime(0);
     let totalTime = 0;
     // start timer, generate random events, update date accordingly until game is done.
     let gameInterval = setInterval(function () {
@@ -54,7 +55,7 @@ function startGame() {
             updateMsg('game over!');
             // summarize the game
         }
-    }, 5000);
+    }, gameToLifeSeconds * 1000);
 
     // when the game time is done - check which team won and generate the message with team name, final score, and top scorrer from the team
 

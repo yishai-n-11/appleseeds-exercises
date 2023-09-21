@@ -5,3 +5,4 @@ const teamA = [];
 const teamB = [];
 const eventEveryXtime = 5;
 const eventTypes = [];
+const gameToLifeSeconds = 1;
